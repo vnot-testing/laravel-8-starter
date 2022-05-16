@@ -91,6 +91,14 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('MONGO_DB_BASE_URI','mongodb://').env('MONGO_DB_USERNAME','root').':'
+            .env('MONGO_DB_PASSWORD','root').'@'.env('MONGO_DB_HOST', 'localhost').'/'
+            .env('MONGO_DB_DATABASE').'?retryWrites=true&w=majority',
+            'database' => env('MONGO_DB_DATABASE'),
+        ],
+
     ],
 
     /*

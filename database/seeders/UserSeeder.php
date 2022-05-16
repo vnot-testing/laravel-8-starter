@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         // php faker
-        $faker = \Faker\Factory::create();
+        $faker = \Faker\Factory::create('id_ID');
 
         // truncate db
         DB::table('user')->truncate();
@@ -35,6 +35,14 @@ class UserSeeder extends Seeder
                 'password' => app('hash')->make('admin'),
             ],
         ]);
+
+        // // Create user manual with DB Facades
+        // DB::table('auth_two_factor')->insert([
+        //     [
+        //         'uuid' => $faker->uuid,
+        //         'name' => 'email',
+        //     ],
+        // ]);
 
         // Create user manual with model eloquent
         $user = new User();

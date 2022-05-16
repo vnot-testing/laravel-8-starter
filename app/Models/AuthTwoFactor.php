@@ -7,6 +7,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+
 /**
  * App\Models\AuthTwoFactor.
  *
@@ -29,7 +31,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|AuthTwoFactor whereUuid($value)
  * @mixin \Eloquent
  */
-class AuthTwoFactor extends Model
+class AuthTwoFactor extends Eloquent
 {
     use HasFactory;
 

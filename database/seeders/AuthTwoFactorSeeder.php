@@ -15,7 +15,7 @@ class AuthTwoFactorSeeder extends Seeder
     public function run()
     {
         // php faker
-        $faker = \Faker\Factory::create();
+        $faker = \Faker\Factory::create('id_ID');
 
         // truncate db
         DB::table('auth_two_factor')->truncate();
