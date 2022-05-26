@@ -21,9 +21,12 @@
         "laravel-notification-channels/fcm": "~2.0",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "orchid/platform": "*",
         "owenvoke/blade-fontawesome": "^1.8",
         "ramsey/uuid": "^4.1",
-        "renatomarinho/laravel-page-speed": "^2.0"
+        "renatomarinho/laravel-page-speed": "^2.0",
+        "spatie/db-dumper": "^2.21",
+        "spatie/laravel-backup": "^6.16"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.9",

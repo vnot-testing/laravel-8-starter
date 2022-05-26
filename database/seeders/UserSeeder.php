@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
                 'username' => 'admin',
                 'email' => 'admin@email.com',
                 'email_verified_at' => now(),
-                'phone' => '01234567',
+                'phone' => $faker->e164PhoneNumber,
                 'password' => app('hash')->make('admin'),
             ],
         ]);
@@ -51,7 +51,7 @@ class UserSeeder extends Seeder
         $user->username = 'user';
         $user->email = 'user@email.com';
         $user->email_verified_at = now();
-        $user->phone = '7890123';
+        $user->phone = $faker->e164PhoneNumber;
         $user->password = app('hash')->make('user');
         $user->save();
 
